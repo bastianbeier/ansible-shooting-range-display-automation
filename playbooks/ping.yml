@@ -1,0 +1,6 @@
+- name: Update
+  hosts: '{{ group }}'
+  remote_user: jagabluat
+  tasks:
+   - name: Ping
+     ansible.builtin.ping:

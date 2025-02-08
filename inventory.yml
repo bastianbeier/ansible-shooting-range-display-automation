@@ -1,0 +1,32 @@
+standard:
+  hosts:
+    pi1:
+      ansible_host: 192.168.2.191
+      server: 192.168.11.1
+    pi2:
+      ansible_host: 192.168.2.192
+      server: 192.168.11.2
+    pi3:
+      ansible_host: 192.168.2.193
+      server: 192.168.11.3
+    pi4:
+      ansible_host: 192.168.2.194
+      server: 192.168.11.4
+    pi5:
+      ansible_host: 192.168.2.195
+      server: 192.168.11.5
+    pi6:
+      ansible_host: 192.168.2.196
+      server: 192.168.11.6
+    pi7:
+      ansible_host: 192.168.2.197
+      server: 192.168.11.7
+    pi8:
+      ansible_host: 192.168.2.198
+      server: 192.168.11.8
+
+replacement:
+  hosts:
+    pi9:
+      ansible_host: 192.168.2.199
+      server: 192.168.11.1

@@ -1,0 +1,8 @@
+- name: Reboot
+  hosts: '{{ group }}'
+  remote_user: jagabluat
+  become: yes
+  tasks:
+  - name: Reboot
+    ansible.builtin.reboot:
+      reboot_timeout: 180

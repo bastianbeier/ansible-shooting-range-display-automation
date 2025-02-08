@@ -1,0 +1,17 @@
+- name: Setup
+  hosts: standard
+  remote_user: jagabluat
+  tasks:
+    - name: Ensure autostart dir exists
+      ansible.builtin.file:
+        path: /home/jagabluat/.config/autostart
+        state: directory
+    - name: Setup autostart browser in kiosk mode
+      copy:
+        dest: /home/jagabluat/.config/autostart/browser.desktop
+        content: |
+          [Desktop Entry]
+          Name=Open chromium
+          Type=Application
+          Exec=/usr/bin/chromium-browser --kiosk http://{{ server }}
+          Terminal=false

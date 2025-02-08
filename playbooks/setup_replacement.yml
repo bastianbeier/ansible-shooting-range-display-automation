@@ -1,0 +1,13 @@
+- name: Setup
+  hosts: replacement
+  remote_user: jagabluat
+  tasks:
+    - name: Setup autostart browser
+      copy:
+        dest: /home/jagabluat/.config/autostart/browser.desktop
+        content: |
+          [Desktop Entry]
+          Name=Open chromium
+          Type=Application
+          Exec=/usr/bin/chromium-browser http://{{ server }}
+          Terminal=false
